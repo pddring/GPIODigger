@@ -3,7 +3,7 @@ import os
 from digger import Digger
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-host_name = ''    # Host on all available IP addresses
+host_name = ''  # Host on all available IP addresses
 host_port = 8000
 d = Digger()
 
