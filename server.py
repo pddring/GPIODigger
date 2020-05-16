@@ -21,8 +21,8 @@ class DiggerServer(BaseHTTPRequestHandler):
 
     def do_GET(self):
         with open("server.html") as file:
-			html = file.read()
-		
+            html = file.read()
+        
         temp = os.popen("/opt/vc/bin/vcgencmd measure_temp").read()
         self.do_HEAD()
         self.wfile.write(html.format(temp[5:]).encode("utf-8"))
@@ -35,10 +35,10 @@ class DiggerServer(BaseHTTPRequestHandler):
         if post_data == 'Stop':
             d.stop()
         if post_data == "Forwards":
-			d.left_track.forward()
-			d.right_track.forward()
+            d.left_track.forward()
+            d.right_track.forward()
         self._redirect('/')
-		
+        
 if __name__ == '__main__':
     http_server = HTTPServer((host_name, host_port), DiggerServer)
     print("Server Starts - %s:%s" % (host_name, host_port))
