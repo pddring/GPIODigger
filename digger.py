@@ -8,14 +8,14 @@ class Digger:
     arm2 = Motor(23,24)
     grabber = Motor(9,10)
     body = Motor(25,8)
-	
-	def stop():
-		right_track.stop()
-		left_track.stop()
-		arm1.stop()
-		arm2.stop()
-		grabber.stop()
-		body.stop()
+    
+    def stop():
+        right_track.stop()
+        left_track.stop()
+        arm1.stop()
+        arm2.stop()
+        grabber.stop()
+        body.stop()
     
     def test(self, m):
         m.forward()
